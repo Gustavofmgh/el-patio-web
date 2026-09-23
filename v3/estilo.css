@@ -1,0 +1,127 @@
+@import url("../fonts/fuente.css");
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap");
+/* V3: la web es un índice de preguntas. Fondo naranja, preguntas enormes en blanco. */
+:root{
+  --naranja:#EE721E;
+  --naranja-oscuro:#A94A0A;
+  --tinta:#16211F;
+  --blanco:#FFFFFF;
+  --hueso:#F7F5F1;
+  --serif:"Patio Serif","Noto Serif Display","Times New Roman",serif;
+  --sans:"Public Sans",system-ui,sans-serif;
+  --ancho:1400px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--naranja);color:var(--tinta);font:400 1.05rem/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--tinta);outline-offset:4px}
+.env{max-width:var(--ancho);margin:0 auto;padding:0 clamp(16px,4vw,56px)}
+.serif,h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:.95;font-stretch:62.5%}
+p{max-width:60ch}
+
+/* cabecera mínima */
+.cabecera .env{display:flex;justify-content:space-between;align-items:center;height:88px}
+.cabecera img{width:58px}
+.cabecera nav{display:flex;gap:1.8rem;font-weight:600;font-size:.95rem}
+.cabecera nav a{text-decoration:none}
+.cabecera nav a:hover,.cabecera nav a[aria-current=page]{color:#fff}
+
+/* portada */
+.lema{padding:clamp(3rem,8vw,6rem) 0 clamp(2rem,4vw,3rem)}
+.lema h1{font-size:clamp(3rem,7vw,6.2rem);color:#fff;max-width:20ch}
+.lema h1 span{color:var(--tinta)}
+.lema p{margin-top:1.5rem;font-size:1.15rem;max-width:46ch}
+
+/* índice de preguntas: el gesto de esta versión */
+.preguntas{list-style:none;border-top:2px solid var(--tinta)}
+.preguntas li{border-bottom:2px solid var(--tinta)}
+.preguntas a{display:grid;grid-template-columns:1fr auto;align-items:center;gap:2rem;padding:clamp(1.2rem,2.5vw,2rem) 0;text-decoration:none;position:relative}
+.preguntas strong{font:400 clamp(3rem,8.5vw,8.2rem)/.9 var(--serif);color:#fff;letter-spacing:-.02em;transition:color .2s;font-stretch:62.5%}
+.preguntas .quien{text-align:right;font-weight:600;white-space:nowrap}
+.preguntas .quien small{display:block;font-weight:400}
+.preguntas img{position:absolute;right:16rem;top:50%;width:260px;aspect-ratio:4/5;object-fit:cover;transform:translateY(-50%) rotate(-3deg);opacity:0;pointer-events:none;transition:opacity .2s;box-shadow:0 0 0 8px #fff}
+.preguntas a:hover strong,.preguntas a:focus-visible strong{color:var(--tinta)}
+.preguntas a:hover img,.preguntas a:focus-visible img{opacity:1}
+.faltan{padding:2rem 0 clamp(4rem,8vw,6rem);display:flex;gap:1rem 2.5rem;align-items:baseline;flex-wrap:wrap}
+.faltan b{font:400 clamp(3rem,6vw,5rem)/1 var(--serif);color:var(--tinta);font-stretch:62.5%}
+
+/* bloques claros */
+.claro{background:var(--hueso);padding:clamp(4rem,9vw,7rem) 0}
+.claro h2{font-size:clamp(2.6rem,5.5vw,4.8rem);color:var(--naranja)}
+.formas{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,5rem);margin-top:3rem}
+.formas img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.formas h3{font-size:clamp(2.2rem,3.4vw,3rem);margin:1.2rem 0 .5rem}
+.formas .cuando{font-weight:700;margin-top:.8rem;color:var(--naranja-oscuro)}
+.nota{margin-top:1rem;font-size:.95rem}
+.nota b{font-weight:700}
+
+.naranja{background:var(--tinta);color:#fff;padding:clamp(3.5rem,7vw,5rem) 0}
+.naranja .env{display:grid;grid-template-columns:1.2fr 1fr;gap:3rem;align-items:end}
+.naranja h2{font-size:clamp(2.6rem,5vw,4.4rem);color:var(--naranja)}
+.botones{display:flex;gap:.6rem;flex-wrap:wrap}
+.boton{display:inline-block;background:var(--naranja);color:#fff;padding:.85rem 1.3rem;border-radius:999px;font:600 .95rem/1 var(--sans);text-decoration:none}
+.boton:hover{background:#fff;color:var(--tinta)}
+.boton.claro-b{background:#fff;color:var(--tinta)}
+.boton.claro-b:hover{background:var(--tinta);color:#fff}
+
+footer{background:var(--tinta);color:#B9C4C2;padding:2.2rem 0;font-size:.9rem}
+footer .env{display:flex;justify-content:space-between;gap:1.5rem;flex-wrap:wrap}
+footer a{text-decoration:none}
+footer a:hover{color:#fff}
+
+/* página de ponente */
+.ponente-cab{padding:clamp(2rem,5vw,4rem) 0 clamp(2rem,4vw,3rem)}
+.ponente-cab .volver{font-weight:600;text-decoration:none;font-size:.95rem}
+.ponente-cab .volver:hover{color:#fff}
+.ponente-cab h1{font-size:clamp(3.4rem,9vw,8.5rem);color:#fff;margin-top:1.5rem;letter-spacing:-.02em}
+.ponente-cab .quien{font:400 clamp(1.6rem,2.6vw,2.4rem)/1.1 var(--serif);margin-top:1rem;font-stretch:62.5%}
+.sala{background:var(--hueso);padding:clamp(3rem,6vw,4.5rem) 0 clamp(4rem,8vw,6rem)}
+.sala .env{display:grid;grid-template-columns:1.7fr 1fr;gap:clamp(1.5rem,3vw,3rem);align-items:start}
+.pantalla{aspect-ratio:16/9;background:var(--tinta);width:100%}
+.pantalla iframe{width:100%;height:100%;border:0;display:block}
+.sonando{margin-top:1rem;font-weight:600}
+.sonando span{color:var(--naranja-oscuro);font-weight:400}
+.lista h2{font-size:2rem;color:var(--naranja);margin-bottom:.6rem}
+.lista ol{list-style:none;counter-reset:f}
+.lista button{all:unset;box-sizing:border-box;cursor:pointer;display:grid;grid-template-columns:1fr auto;gap:1rem;width:100%;padding:.8rem .6rem;border-bottom:1px solid #DDE3E2;font-size:.95rem;line-height:1.35}
+.lista button span{color:#6A7472;font-size:.85rem;white-space:nowrap}
+.lista button:hover{background:#fff}
+.lista button[aria-current=true]{background:var(--naranja);color:var(--tinta)}
+.lista button[aria-current=true] span{color:var(--tinta)}
+.lista button:focus-visible{outline:3px solid var(--naranja);outline-offset:-3px}
+.perfil{display:grid;grid-template-columns:1fr 2fr;gap:clamp(2rem,4vw,4rem);margin-top:clamp(3rem,6vw,5rem);align-items:start}
+.perfil img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.perfil p{font:400 clamp(1.5rem,2.4vw,2.1rem)/1.2 var(--serif);font-stretch:62.5%}
+.perfil dl{display:grid;grid-template-columns:auto 1fr;gap:.4rem 1.5rem;margin-top:2rem;font-size:.95rem}
+.perfil dt{font-weight:700}
+.otros{padding:clamp(3rem,6vw,4.5rem) 0}
+.otros h2{font-size:2rem;color:#fff;margin-bottom:1rem}
+
+/* sobre El Patio */
+.lema .poema,.poema{font:400 clamp(2rem,3.6vw,3.2rem)/1.1 var(--serif);color:#fff;max-width:22ch;margin-top:0;font-stretch:62.5%}
+.lema .poema + .poema,.poema + .poema{margin-top:2rem}
+.poema b{font-weight:400;color:var(--tinta)}
+.dos{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,5rem);align-items:start}
+.pasos{list-style:none;counter-reset:p;display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;margin-top:2.5rem}
+.pasos li{counter-increment:p;border-top:2px solid var(--tinta);padding-top:1rem}
+.pasos li::before{content:counter(p);font:400 2.6rem/1 var(--serif);color:var(--naranja);display:block;margin-bottom:.5rem;font-stretch:62.5%}
+.pasos h3{font-size:1.8rem;margin-bottom:.3rem}
+.equipo{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
+.equipo img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:30% 35%;filter:grayscale(1)}
+.equipo h3{font-size:2.1rem;margin-top:1rem}
+.equipo .rol{color:var(--naranja);font-weight:700}
+.equipo p{font-size:.95rem;margin-top:.3rem}
+.galeria{display:grid;grid-template-columns:1.4fr 1fr;gap:12px;margin-top:3rem}
+.galeria img{width:100%;height:100%;object-fit:cover;aspect-ratio:3/2}
+
+@media (max-width:980px){
+  .cabecera nav{gap:1rem;font-size:.88rem}
+  .preguntas a{grid-template-columns:1fr}
+  .preguntas .quien{text-align:left}
+  .preguntas img{display:none}
+  .formas,.naranja .env,.sala .env,.perfil,.dos{grid-template-columns:1fr}
+  .pasos{grid-template-columns:1fr 1fr}
+  .equipo{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>El Patio · Propuestas de web</title>
+<meta name="description" content="Tres propuestas de diseño para la web de El Patio.">
+<link rel="icon" href="img/logo.png">
+<style>
+@import url("fonts/fuente.css");
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600&display=swap");
+:root{--naranja:#EE721E;--tinta:#1B1B19;--serif:"Patio Serif","Noto Serif Display","Times New Roman",serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--naranja);color:var(--tinta);font:400 1.05rem/1.55 "Public Sans",system-ui,sans-serif;min-height:100vh}
+.env{max-width:1360px;margin:0 auto;padding:clamp(2rem,5vw,4rem) clamp(16px,4vw,56px)}
+header{display:flex;align-items:center;gap:1.2rem}
+header img{width:64px}
+h1{font:400 clamp(3rem,8vw,7rem)/.92 var(--serif);color:#fff;margin:clamp(2.5rem,6vw,4.5rem) 0 1rem;max-width:14ch;font-stretch:62.5%}
+.bajada{max-width:52ch;font-size:1.15rem}
+ol{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1rem,2.5vw,2rem);margin-top:clamp(2.5rem,5vw,4rem)}
+a{color:inherit;text-decoration:none;display:block}
+figure{background:#fff;padding:10px;transition:transform .2s}
+figure img{display:block;width:100%;aspect-ratio:1440/1000;object-fit:cover;object-position:top}
+a:hover figure,a:focus-visible figure{transform:translateY(-6px)}
+a:focus-visible{outline:3px solid var(--tinta);outline-offset:6px}
+h2{font:400 2.4rem/1 var(--serif);color:#fff;margin-top:1.1rem;font-stretch:62.5%}
+h2 span{color:var(--tinta)}
+li p{margin-top:.4rem;font-size:.97rem}
+footer{margin-top:clamp(3rem,6vw,5rem);font-size:.9rem;border-top:1px solid rgba(0,0,0,.2);padding-top:1.2rem}
+@media (max-width:860px){ol{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){figure{transition:none}}
+</style>
+</head>
+<body>
+<div class="env">
+  <header><img src="img/logo-blanco.png" alt="El Patio"></header>
+  <h1>Tres formas de contar El Patio.</h1>
+  <p class="bajada">Tres propuestas de web con el mismo contenido. Entra en cualquiera y cambia de diseño cuando quieras con el selector de abajo a la izquierda: te lleva a la misma página en el otro diseño.</p>
+  <ol>
+    <li><a href="v1/index.html"><figure><img src="capturas/v1.jpg" alt="Vista previa del diseño Cuaderno"></figure><h2><span>1.</span> Cuaderno</h2>
+      <p>Editorial y limpio, fiel al manifiesto impreso: fondo blanco, serif naranja y el trazo a mano sobre "soñar".</p></a></li>
+    <li><a href="v2/index.html"><figure><img src="capturas/v2.jpg" alt="Vista previa del diseño Cartel"></figure><h2><span>2.</span> Cartel</h2>
+      <p>El lenguaje de vuestras miniaturas de YouTube: marco naranja, mayúsculas estrechas y palabras clave sobre caja.</p></a></li>
+    <li><a href="v3/index.html"><figure><img src="capturas/v3.jpg" alt="Vista previa del diseño Preguntas"></figure><h2><span>3.</span> Preguntas</h2>
+      <p>La web como un índice de preguntas. Cada una abre a su ponente con el vídeo y los fragmentos dentro de la página.</p></a></li>
+  </ol>
+  <footer>El Patio. Paso corto, mirada lejana. Córdoba. Foto de María Calvo: Archivo Fotográfico Universidad de Navarra, <a href="https://commons.wikimedia.org/wiki/File:MCalvo2021.jpg" style="display:inline;text-decoration:underline">CC BY-SA 4.0</a>.</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+/* Tipografía de marca: Times New Roman MT Pro Condensed (Monotype).
+   1) Si está instalada en el ordenador, se usa directamente.
+   2) Si no, se cargan los archivos de esta carpeta:
+      TimesNRMTPro-Cond.woff2 y TimesNRMTPro-BoldCond.woff2 (valen .otf o .ttf).
+   3) Mientras no estén, se ve Noto Serif Display estrecha, la gratuita más parecida. */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wdth,wght@0,62.5..100,400..700;1,62.5..100,400..700&display=swap");
+@font-face{
+  font-family:"Patio Serif";font-weight:400;font-display:swap;
+  src:local("Times New Roman MT Pro Cond"),local("TimesNRMTPro-Cond"),local("Times New Roman MT Condensed"),
+      url(TimesNRMTPro-Cond.woff2) format("woff2"),url(TimesNRMTPro-Cond.otf) format("opentype"),url(TimesNRMTPro-Cond.ttf) format("truetype");
+}
+@font-face{
+  font-family:"Patio Serif";font-weight:700;font-display:swap;
+  src:local("Times New Roman MT Pro Bold Cond"),local("TimesNRMTPro-BoldCond"),local("Times New Roman MT Condensed Bold"),
+      url(TimesNRMTPro-BoldCond.woff2) format("woff2"),url(TimesNRMTPro-BoldCond.otf) format("opentype"),url(TimesNRMTPro-BoldCond.ttf) format("truetype");
+}
