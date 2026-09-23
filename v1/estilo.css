@@ -148,7 +148,7 @@ section + section{padding-top:0}
 .poema b{font-weight:700;color:var(--naranja-texto)}
 .poema + .poema{margin-top:2.4rem}
 .equipo{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
-.persona img{width:100%;filter:grayscale(1)}
+.persona img{aspect-ratio:4/3;object-fit:cover;object-position:30% 35%;width:100%;filter:grayscale(1)}
 .persona h3{margin-top:1.1rem;text-align:right;font-size:2.4rem;color:var(--naranja)}
 .persona .desde{font:400 1.35rem/1.2 var(--serif);color:var(--gris);text-align:right;font-stretch:62.5%}
 .persona p{margin-top:.9rem}

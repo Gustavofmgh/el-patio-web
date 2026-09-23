@@ -151,6 +151,8 @@ section{padding:clamp(4rem,9vw,7rem) 0}
 .poema{font:700 clamp(1.8rem,3.2vw,2.8rem)/1.08 var(--serif);text-transform:uppercase;max-width:20ch;font-stretch:62.5%}
 .poema + .poema{margin-top:2rem}
 .equipo{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.persona .duo{aspect-ratio:1}
+.persona .duo img{object-position:32% 40%}
 .persona h3{margin-top:1rem}
 .persona .desde{display:inline-block;background:var(--naranja);color:#fff;font:700 .78rem/1 var(--sans);padding:.45rem .7rem;margin-top:.6rem}
 .persona p{margin-top:.8rem;color:var(--gris)}
